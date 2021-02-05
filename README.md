@@ -8,7 +8,7 @@
 # ⏹ Índice
   - [🎇 Sobre](#-sobre)
   - [💻 Tecnologia Utilizadas](#-tecnologia-utilizadas)
-  - [Status]()
+  - [Status](#-status)
 
 ---
 ## 🎇 Sobre
