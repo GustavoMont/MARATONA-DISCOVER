@@ -8,10 +8,12 @@
 # ⏹ Índice
   - [🎇 Sobre](#-sobre)
   - [💻 Tecnologia Utilizadas](#-tecnologia-utilizadas)
+  - [Status]()
 
 ---
 ## 🎇 Sobre
 <span>Essa é uma aplicação web feita apenas visando colocar em prática tecnologias como **HTML**, **CSS**, **JS**. Tudo feito na **MARATONA DISCOVER**</span>
+
 
     
 ---
@@ -22,6 +24,8 @@
 - JS
 
 ---
+## Status
+Tentando deixar o projeto mais a minha cara. Adicionando um dark mode e provavelmente uma funcionalidade que eu acredito que vá melhorar um pouco mais a experiência do usuário.
 
 
 

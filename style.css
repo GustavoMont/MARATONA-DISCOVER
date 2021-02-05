@@ -58,15 +58,45 @@ h2{
     font-weight: normal;
 }
 /* Switch ============================ */
-.switch{
-    display: inline;
+.switch-container{
+    float: right;
+    color: blanchedalmond;
+    display: flex;
+    justify-content: center;
+    font-size: .8rem;
 }
-slider.round {
+#switch{
     
-    height: 10px;
-    width: 100px;
-    content: "";
-    
+    width: 40px;
+    height: 20px;
+    position: relative;
+    -webkit-appearance: none;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    background: gray;
+    outline: none;
+    border-radius: 10px;
+    box-shadow: inset 0 0 5px rgba(0,0,0, 0.5);
+}
+#switch:checked{
+    background: var(--dark-txt);
+}
+#switch::before{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    top: 0px;
+    right: -40;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+    transform: scale(1.1);
+    transition:.5s ;
+}
+#switch:checked::before{
+    right: 0;
 }
 /* Links and Buttons ============================ */
 a {
@@ -123,7 +153,8 @@ header{
     background: var(--header);
     padding: 2rem 0 10rem;
     text-align: center;
-    
+    display: flex;
+    justify-content: space-around;
 }
 #logo{
     color: #fff;
