@@ -1,10 +1,23 @@
 /* Pesquisar css-tricks */
 /* Global ============================ */
 :root{
-    --dark-blue: #363f5f;
-    --green: #49aa26;
-    --light-green: #3dd705;
-    --red: #e92929;
+    --body-modal: #f0f2f5;
+    --dark-txt: #363f5f;
+    --button-card: #49aa26;
+    --hover-btn: #3dd705;
+    --header: #2d4a22;
+    --negative: #e92929;
+    --card: white;
+    --light-txt: gray;
+}
+.dark-mode:root{
+    --body-modal: #201d1d;
+    --dark-txt: #61a0f3;
+    --button-card: #7526aa;
+    --header: #5c1463;
+    --hover-btn: #8631be;
+    --negative: #e92929;
+    --card: rgb(49, 40, 40);
 }
 *{
     margin: 0;
@@ -15,7 +28,7 @@ html{
     font-size: 93.75%;
 }
 body{
-    background: #f0f2f5;
+    background: var(--body-modal);
     font-family: 'Poppins', sans-serif;
 }
 .sr-only{
@@ -34,21 +47,34 @@ body{
 
     margin: auto;
 }
+
+
 /* Titles ============================ */
 h2{
     margin-top: 3.2rem;
     margin-bottom: 0.8rem;
-    color: var(--dark-blue);
+    color: var(--dark-txt);
 
     font-weight: normal;
 }
+/* Switch ============================ */
+.switch{
+    display: inline;
+}
+slider.round {
+    
+    height: 10px;
+    width: 100px;
+    content: "";
+    
+}
 /* Links and Buttons ============================ */
 a {
-    color: var(--green);
+    color: var(--button-card);
     text-decoration: none;
 }
 a:hover {
-    color: var(--light-green);
+    color: var(--hover-btn);
 }
 
 button{
@@ -60,14 +86,14 @@ button{
 
     color: white;
 
-    background: var(--green);
+    background: var(--button-card);
 
     padding: 0;
 
     cursor: pointer;
 }
 button:hover{
-    background: var(--light-green);
+    background: var(--hover-btn);
 }
 
 .button.new {
@@ -77,8 +103,8 @@ button:hover{
 }
 
 .button.cancel {
-    color: var(--red);
-    border: 2px var(--red) solid;
+    color: var(--negative);
+    border: 2px var(--negative) solid;
     border-radius: .25rem;
     height: 50px;
 
@@ -94,7 +120,7 @@ button:hover{
 
 /* Header ============================ */
 header{
-    background: #2d4a22;
+    background: var(--header);
     padding: 2rem 0 10rem;
     text-align: center;
     
@@ -113,13 +139,13 @@ header{
 }
 /* Card ============================ */
 .card{
-    background: white;
+    background: var(--card);
     padding: 1.5rem 2rem;
     border-radius: .25rem;
 
     margin-bottom: 2rem;
 
-    color: var(--dark-blue);
+    color: var(--dark-txt);
 }
 .card h3{
     font-weight: normal;
@@ -136,7 +162,7 @@ header{
     margin-top: 1rem;
 }
 .card.total{
-    background: var(--green);
+    background: var(--button-card);
     color: white;
 }
 /* Table ============================ */
@@ -159,7 +185,7 @@ table tbody tr td:last-child{
     border-radius: 0 .25rem .25rem 0 ;
 }
 table thead th {
-    background: white;
+    background: var(--card);
     
     font-weight: normal;
     padding: 1rem 2rem;
@@ -173,18 +199,18 @@ table tbody tr:hover{
     opacity: 1;
 }
 table tbody td{
-    background: white;
+    background: var(--card);
     
     padding: 1rem 2rem;
 }
 td.description {
-    color: var(--dark-blue);
+    color: var(--dark-txt);
 }
 td.income {
     color: #12a454;
 }
 td.expense {
-    color: var(--red);
+    color: var(--negative);
 }
 /* Modal ============================ */
 .modal-overlay {
@@ -208,7 +234,7 @@ td.expense {
     opacity: 1;
 }
 .modal {
-    background: #f0f2f5;
+    background: var(--body-modal);
     padding: 2.4rem;
     width: 90%;
     max-width: 500px;
@@ -233,7 +259,8 @@ td.expense {
     margin-top: 0.8rem;
 }
 .input-group small{
-    opacity: 0.4;
+    color: var(--light-txt);
+    opacity: 0.8;
 }
 
 .input-group.actions{
@@ -250,7 +277,7 @@ td.expense {
 footer{
     text-align: center;
     padding: 4rem 0 2rem;
-    color: var(--dark-blue);
+    color: var(--dark-txt);
 
     opacity: 0.6;
 }

@@ -1,3 +1,13 @@
+const theme =
+{
+    html: document.querySelector('html'),
+    switch: document.querySelector('#switch'),
+    
+    dark()
+    {
+        this.html.classList.toggle('dark-mode')
+    },
+}
 const Modal = 
 {
     open()
@@ -13,7 +23,6 @@ const Modal =
         document.querySelector(".modal-overlay").classList.remove('active')
     }
 }
-
 const Storage = 
 {
     get(){
