@@ -122,9 +122,8 @@ const Utils =
 {
     formatAmount(value)
     {
-        value = Number(value.replace(/\,\./g, "")) * 100
-        console.log(value)
-        return value
+        value  *= 100
+        return Math.round(value)
     },
     formatDate(date)
     {
@@ -135,6 +134,7 @@ const Utils =
     },
     formatCurrency(value) 
     {
+        
         const signal = Number(value) < 0 ? '-' : ''
 
         value = String(value).replace(/\D/g, "") /** /\D/g(global)Procura tudo que não for número na Sting */
@@ -153,6 +153,20 @@ const Form =
     description: document.querySelector('input#description'),
     amount: document.querySelector('input#amount'),
     date: document.querySelector('input#date'),
+    typeAmount: document.getElementsByName('check'), 
+    minus: document.querySelector('#amount'),
+    radio()
+    {
+        if (Form.typeAmount[1].value == 'Gasto')
+        {
+            alert(Form.typeAmount[1].value)
+            return -1
+        }
+        else 
+        {
+            return 1
+        }
+    },
     getValue()
     {
         return {
@@ -178,7 +192,7 @@ const Form =
     // Formatar os Dados
     formatData(){
         let {description, amount, date} = Form.getValue()
-        amount = Utils.formatAmount(amount)
+        amount = Utils.formatAmount(amount) * Form.radio()
         
         date = Utils.formatDate(date)
         

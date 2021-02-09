@@ -21,7 +21,7 @@
         <!-- Rounded switch -->
         <div class="switch-container">
             <label class="switch">
-                Dark-Mod
+                <span>Dark-Mode</span>
                 <input type="checkbox" id="switch" onchange="theme.dark()">
             </label>
         </div>
@@ -92,12 +92,19 @@
                       name="description" 
                       placeholder="Descrição"  
                       >
+                    </div>
 
+                    <div class="input-group check">
+                        <label for="income">Ganho</label>
+                        <input type="radio" onclick="Form.radio()" name="check" id="income" value="Ganho">
+                        <label for="expense" >Gasto</label>
+                        <input type="radio" onclick="Form.radio()" name="check" id="expense" value="Gasto">
                     </div>
                    
                     <div class="input-group">
                       <label class="sr-only"
                       for="amount">Valor</label>
+                      
                       <input 
                       type="number"
                       step="0.01" 
