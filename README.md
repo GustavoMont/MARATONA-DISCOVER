@@ -1,9 +1,17 @@
+<style>
+  div
+  {
+    overflow-x: auto;
+  }
+</style>
 <h1 align = "center">
     <img src="assets/logo.svg">
 </h1>
-<h1 align = "center">
-    <img src="https://ik.imagekit.io/gustavomont3/dev_finances_D_DY2-NYp.gif" style="overflow-x: auto;">
-</h1>
+<div>
+  <h1 align = "center" style="overflow-x: auto">
+      <img src="https://ik.imagekit.io/gustavomont3/dev_finances_D_DY2-NYp.gif">
+  </h1>
+</div>
 
 # ⏹ Índice
   - [🎇 Sobre](#-sobre)
