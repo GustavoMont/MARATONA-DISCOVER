@@ -1,9 +1,3 @@
-<style>
-  div
-  {
-    overflow-x: auto;
-  }
-</style>
 <h1 align = "center">
     <img src="assets/logo.svg">
 </h1>
