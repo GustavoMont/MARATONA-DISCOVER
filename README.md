@@ -2,7 +2,7 @@
     <img src="assets/logo.svg">
 </h1>
 <h1 align = "center">
-    <img src="https://ik.imagekit.io/gustavomont3/dev_finances_D_DY2-NYp.gif">
+    <img src="https://ik.imagekit.io/gustavomont3/dev_finances_D_DY2-NYp.gif" style="overflow-x: auto;">
 </h1>
 
 # ⏹ Índice
