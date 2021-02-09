@@ -63,7 +63,7 @@ const Transaction =
     total()
     {
         // incomes + expenses
-        let total = this.incomes() - this.expenses()
+        let total = this.incomes() + this.expenses()
         return total
     },
     add(info)
@@ -122,6 +122,7 @@ const Utils =
 {
     formatAmount(value)
     {
+        value = value * Form.radio()
         value  *= 100
         return Math.round(value)
     },
@@ -135,9 +136,9 @@ const Utils =
     formatCurrency(value) 
     {
         
-        const signal = Number(value) < 0 ? '-' : ''
+       // const signal = Number(value) < 0 ? '-' : ''
 
-        value = String(value).replace(/\D/g, "") /** /\D/g(global)Procura tudo que não for número na Sting */
+       // value = String(value).replace(/\D/g, "") /** /\D/g(global)Procura tudo que não for número na Sting */
 
         value = Number(value)/100
 
@@ -145,7 +146,7 @@ const Utils =
             style: "currency",
             currency: "BRL",
         })
-        return signal + value
+        return value
     }
 } 
 const Form = 
@@ -157,9 +158,8 @@ const Form =
     minus: document.querySelector('#amount'),
     radio()
     {
-        if (Form.typeAmount[1].value == 'Gasto')
+        if (Form.typeAmount[1].checked == true)
         {
-            alert(Form.typeAmount[1].value)
             return -1
         }
         else 
@@ -192,7 +192,7 @@ const Form =
     // Formatar os Dados
     formatData(){
         let {description, amount, date} = Form.getValue()
-        amount = Utils.formatAmount(amount) * Form.radio()
+        amount = Utils.formatAmount(amount)
         
         date = Utils.formatDate(date)
         
